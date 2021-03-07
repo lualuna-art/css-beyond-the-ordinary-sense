@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 
+OOCSS tem 2 princípios:
+    - Separar estrutura invisível: margin, passing, width, heigth...
+    - Separar estrutura visível: Cores, fontes, degradês, bordas... */
+
+.btn-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Aqui apenas a estrutura, o que não se pode enxergar visualmente */
+.btn {
+   width: 10%;
+   height: 5%;
+   margin: 2%;
+   font-size: 1.8em;
+}
+
+/* aqui, separa tudo que é visual, tudo que se pode ENXERGAR no botão */
+.btn-skin {
+    border-radius: 50px;
+    background-color: rgb(198, 240, 226);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Aqui apenas a modificação do visual. Ela acaba sobrescrevendo o background estipulado nas outras classes pela POSÇÃO. A ultima config de elemento que prevalece. */
+.btn-secondary {
+    background-color: rebeccapurple;
+}
